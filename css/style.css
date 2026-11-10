@@ -64,7 +64,9 @@ nav ul {
     height: 52rem;
     background-color: purple;
 }
-
+.hero h2{
+    font-size:5.2rem ;
+}
 .hero .inner {
     display: flex;
     align-items: center;
@@ -91,6 +93,46 @@ main section {}
     flex-direction: row-reverse;
     margin:2.4rem 0 ;
 }
+.thumb {
+    width: 40rem;
+    height: 22rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    position: relative;
+    padding:1.2rem
+}
+.thumb .bg{
+    width: 100%;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: absolute;
+    top:0;
+    z-index: 0;
+    left: 0;
+    transition: all .3s;
+    transform: scale(1);
+}
+.thumb .date {
+    position: relative;
+    z-index: 1;
+
+}
+.post:nth-of-type(1) .thumb .bg{
+    background-image: url(../img/post-img-1.png);
+}
+.post:nth-of-type(2) .thumb .bg{
+    background-image: url(../img/post-img-2.png);
+}
+.post:nth-of-type(3) .thumb .bg{
+    background-image: url(../img/post-img-3.png);
+}
+
+.post:hover .thumb .bg{
+    transform: scale(1.05);
+}
+
 #photos {
     margin-top: 6rem;
 }
