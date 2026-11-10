@@ -89,7 +89,7 @@ main section {}
     display: flex;
     align-items: center;
 }
-.post:nth-last-of-type(2) {
+.post:nth-of-type(2) {
     flex-direction: row-reverse;
     margin:2.4rem 0 ;
 }
@@ -100,6 +100,9 @@ main section {}
     overflow: hidden;
     position: relative;
     padding:1.2rem
+}
+.info {
+    flex:1
 }
 .thumb .bg{
     width: 100%;
