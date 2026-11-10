@@ -21,6 +21,7 @@ body {
     font-family: "Noto Sans KR", sans-serif;
     color: #333333;
     background-color: #F5F3FF;
+    height: auto;
 }
 
 h1,
@@ -28,4 +29,100 @@ h2,
 h3 {
     font-family: "Do Hyeon", sans-serif;
     font-weight: normal;
+}
+
+.inner,
+main {
+    max-width: 120rem;
+    margin: auto;
+    height: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* background-color: #F5F3FF; */
+    z-index: 3;
+    color: #F5F3FF;
+    padding: 2.4rem 0;
+}
+
+header .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 132rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 2.8rem;
+}
+
+.hero {
+    height: 52rem;
+    background-color: purple;
+}
+
+.hero .inner {
+    display: flex;
+    align-items: center;
+
+}
+
+main section {}
+
+.profile {
+    padding: 4rem;
+    border-radius: 1.6rem;
+    margin-top: -3.7rem;
+    background-color: #fff;
+    margin-bottom: 6rem;
+}
+.post {
+    padding: 4rem;
+    background-color: #fff;
+    border-radius: 1.6rem;
+    display: flex;
+    align-items: center;
+}
+.post:nth-last-of-type(2) {
+    flex-direction: row-reverse;
+    margin:2.4rem 0 ;
+}
+#photos {
+    margin-top: 6rem;
+}
+.photos {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 10rem 10rem ;
+    gap: 1rem;
+    grid-template-areas: "p1 p1 p2 p3" "p4 p5 p5 p3 "
+    ;
+}
+.p1 {
+    grid-area: p1;
+}
+.p2 {
+    grid-area: p2;
+}
+.p3 {
+    grid-area: p3;
+}
+.p4 {
+    grid-area: p4;
+}
+.p5 {
+    grid-area: p5;
+}
+.photos li{
+    background-color: #333333;
+    border-radius: 1.2rem;
+}
+footer {
+    background-color: #1E1B4B;
+    margin-top: 8rem;
+    padding: 3rem;
 }
