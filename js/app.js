@@ -20,6 +20,37 @@ cards.forEach((card, index) => {
 
 const body = document.querySelector('body')
 const topBtn = document.querySelector('.top')
+const mNavBtn = document.querySelector('.mob-nav-btn')
+const navBtns = document.querySelectorAll('nav ul li a')
+
+console.log(navBtns.length)
+navBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault()
+        
+        const id = btn.getAttribute('href')
+        const target = document.querySelector(id)
+        const headerH = document.querySelector('header').offsetHeight
+        window.scrollTo({
+            top: target.offsetTop - headerH,
+            behavior: 'smooth'
+        })
+        body.classList.remove('m-nav-open')
+
+    })
+})
+
+
+
+
+
+
+
+
+
+
+
+
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
@@ -36,4 +67,9 @@ topBtn.addEventListener('click', () => {
         top: 0,
         behavior: 'smooth'
     })
+})
+
+mNavBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    body.classList.toggle('m-nav-open')
 })
