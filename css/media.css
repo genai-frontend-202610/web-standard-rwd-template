@@ -1,3 +1,8 @@
+@media screen and (max-width:1200px) {
+    .hero .btn-wrap{
+       left: 0;
+    }
+}
 @media screen and (max-width:1024px) {
         .hero h2 {
         font-size: 4.4rem;
@@ -93,6 +98,12 @@
 }
 
 @media screen and (max-width:768px) {
+    .hero .btn-wrap{
+  bottom: 5rem;          /* hero 바닥에서 4rem 위 */
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0;
+    }
     .inner,main {
         padding: 0 2rem;
     }
@@ -186,7 +197,7 @@
         top: 48%;
     }
       .hero {
-        height: 46rem;
+        height: 56rem;
     }
 
     .hero .inner {

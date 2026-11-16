@@ -27,7 +27,7 @@ console.log(navBtns.length)
 navBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
         e.preventDefault()
-        
+
         const id = btn.getAttribute('href')
         const target = document.querySelector(id)
         const headerH = document.querySelector('header').offsetHeight
@@ -45,7 +45,15 @@ navBtns.forEach(btn => {
 
 
 
-
+const swiper = new Swiper('.hero-slider', {
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+    },
+});
 
 
 
